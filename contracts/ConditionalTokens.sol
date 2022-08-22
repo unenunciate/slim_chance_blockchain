@@ -1,8 +1,8 @@
 pragma solidity ^0.5.1;
 
-import { IERC20 } from "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol";
-import { RewardReceiver } from "./interfaces/RewardReceiver.sol";
-import { ERC1155 } from "./ERC1155/ERC1155.sol";
+import { IERC20 } from " @openzeppelin/contracts/interfaces/IERC20.sol";
+import { RewardReciever } from "./interfaces/RewardReciever.sol";
+import { ERC1155 } from "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import { CTHelpers } from "./CTHelpers.sol";
 
 contract ConditionalTokens is ERC1155 {
@@ -277,7 +277,7 @@ contract ConditionalTokens is ERC1155 {
 
     function _payTaxes( IERC20 collateralToken, bytes32 conditionId, uint amount ) internal {
         collateralToken.transferFrom(msg.sender, conditions[conditionId].oracle, amount);
-        RewardReceiver(conditions[conditionId].oracle).addToReward(conditions[conditionId].questionId, amount*0.75);
+        RewardReciever(conditions[conditionId].oracle).addToReward(conditions[conditionId].questionId, amount*0.75);
     }
 
     /// @dev Gets the outcome slot count of a condition.

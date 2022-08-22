@@ -13,7 +13,7 @@
         "@ethersproject/bignumber": "^5.0.8",
         "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
         "@nomiclabs/hardhat-waffle": "^2.0.1",
-        "@openzeppelin/contracts": "^4.4.1",
+        "@openzeppelin/contracts": "^4.7.3",
         "@typechain/ethers-v5": "^5.0.0",
         "@typechain/hardhat": "^1.0.1",
         "@types/chai": "^4.2.13",
@@ -29,8 +29,8 @@
         "eslint-config-airbnb-base-typescript-prettier": "^4.1.0",
         "eslint-config-prettier": "^6.12.0",
         "eslint-plugin-import": "^2.22.1",
-        "ethers": "^5.4.5",
         "ethereum-waffle": "^3.4.0",
+        "ethers": "^5.4.5",
         "fs-extra": "^9.0.1",
         "hardhat": "^2.0.3",
         "hardhat-deploy": "^0.7.0-beta.28",
@@ -75,5 +75,8 @@
         "test": "hardhat test",
         "coverage": "hardhat coverage --solcoverjs ./.solcover.js --temp artifacts --testfiles \"./test/**/*.ts\"",
         "deploy": "hardhat deploy"
+    },
+    "dependencies": {
+        "openzeppelin-solidity": "^4.6.0"
     }
 }

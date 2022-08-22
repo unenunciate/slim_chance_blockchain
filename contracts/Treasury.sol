@@ -1,11 +1,11 @@
 pragma solidity ^0.8.10;
 
-import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import { IERC20 } from "@openzeppelin/contracts/interfaces/IERC20.sol";
 import { ReentrancyGuard } from "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 import { IConditionalTokens } from "./interfaces/IConditionalTokens.sol";
 
-import { RewardReceiver } from "./interfaces/RewardReciever.sol";
+import { RewardReciever } from "./interfaces/RewardReciever.sol";
 
 contract Treasured {
   address public treasurer;
@@ -21,7 +21,7 @@ contract Treasured {
   }
 }
 
-contract Treasury is Treasured, ReentrancyGuard, RewardReceiver {
+contract Treasury is Treasured, ReentrancyGuard, RewardReciever {
     
     IConditionalTokens public immutable ctf;
 

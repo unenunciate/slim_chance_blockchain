@@ -698,10 +698,10 @@
     "@types/sinon-chai" "^3.2.3"
     "@types/web3" "1.0.19"
 
-"@openzeppelin/contracts@^4.4.1":
-  version "4.6.0"
-  resolved "https://registry.npmjs.org/@openzeppelin/contracts/-/contracts-4.6.0.tgz#c91cf64bc27f573836dba4122758b4743418c1b3"
-  integrity sha512-8vi4d50NNya/bQqCmaVzvHNmwHvS0OBKb7HNtuNwEE3scXWrP31fKQoGxNMT+KbzmrNZzatE3QK5p2gFONI/hg==
+"@openzeppelin/contracts@^4.7.3":
+  version "4.7.3"
+  resolved "https://registry.yarnpkg.com/@openzeppelin/contracts/-/contracts-4.7.3.tgz#939534757a81f8d69cc854c7692805684ff3111e"
+  integrity sha512-dGRS0agJzu8ybo44pCIf3xBaPQN/65AIXNgK8+4gzKd5kbvlqyxryUYVLJv7fK98Seyd2hDZzVEHSWAh0Bt1Yw==
 
 "@resolver-engine/core@^0.3.3":
   version "0.3.3"
@@ -7643,6 +7643,11 @@ opencollective-postinstall@^2.0.2:
   version "2.0.3"
   resolved "https://registry.npmjs.org/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz#7a0fff978f6dbfa4d006238fbac98ed4198c3259"
   integrity sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==
+
+openzeppelin-solidity@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/openzeppelin-solidity/-/openzeppelin-solidity-4.6.0.tgz#a65a4e11dc72f46a9e2eb691fc9aeff2d70fe189"
+  integrity sha512-Os4FUzc5V+4U2lpFyJA0kWh5fy3AZhYgS8CmB3Db4c4NGd3SsjFzuvWjBybn7NA4KZG7Gf6Lb7BdS8Cxb8Adtw==
 
 optionator@^0.8.1, optionator@^0.8.2:
   version "0.8.3"
