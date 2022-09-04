@@ -6,9 +6,11 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
     const { deployer } = await getNamedAccounts();
 
+    const ct = await deployments.deploy("ConditionalTokens",{from: deployer, args: []});
+
     const t = await deployments.deploy("Treasury", {
         from: deployer,
-        args: ['', '0xfe4F5145f6e09952a5ba9e956ED0C25e3Fa4c7F1'],
+        args: [`${ct.address}`, '0xfe4F5145f6e09952a5ba9e956ED0C25e3Fa4c7F1'],
     });
 };
 

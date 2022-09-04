@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/interfaces/IERC20.sol";
@@ -9,7 +10,7 @@ import  "./interfaces/RewardReciever.sol";
 contract Treasured {
   address public treasurer;
 
-  constructor() public { treasurer = msg.sender; }
+  constructor() { treasurer = msg.sender; }
 
   function setTreasurer( address newTreasurer ) public onlyTreasurer
   { treasurer = newTreasurer; }
@@ -181,7 +182,7 @@ contract Treasury is Treasured, RewardReciever {
         rewards[rewardID] += amount;
     }
 
-    function _hasActiveChallenge(address participant) internal returns (bool) {
+    function _hasActiveChallenge(address participant) internal view returns (bool) {
         for (uint i = 0; i < challengeIDs.length; i++) {
             if(challenges[challengeIDs[i]].creator == participant) {
                 if(challenges[challengeIDs[i]].resolved == false) {
